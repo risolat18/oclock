@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#000000;
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+    list-style: none;
+}
+.oclock{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/oclockkimg.png),
+    url(../img/oclockkimg.png),
+    radial-gradient(circle, rgba(37,73,90) 0%, rgb(25,48,60) 11%, rgba(9, 25, 33, 1)38%);
+    background-size: cover;
+    box-shadow: 0 -15px 15px rgba(90, 39, 192, 0.3),
+    inset 0 -15px 15px #191919,
+    0 15px 15px rgba(221, 153, 238, 0.35),
+    inset 0 -15px 15px #8f20ff;
+    border-radius: 50%;
+}
+.oclock .hours,.oclock .min,.oclock .sec{
+    position: absolute;
+}
+
+.oclock .hour, .hr{
+    width: 190px;
+    height: 190px;
+}
+.oclock .sec, .sc{
+    width: 114px;
+    height: 245px;
+}
+.clock .sc, .sc{
+    width: 115;
+    height: 235;
+}
+.mn, .sc{
+    position: absolute;
+    border-radius: 50%;
+}
+.hr::before{
+    content: "";
+    width: 6px;
+    height: 78px;
+    bottom: 96px;
+    left: 93px;
+    z-index: 10;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    background: rgb(26, 24, 24);
+  }
+.mn::before{
+    content: "";
+    width: 6px;
+    height: 112px;
+    right: -3px;
+    bottom: 4px;
+    z-index: 11;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    background: rgb(26, 24, 24);
+}
+.sc::before {
+    content: "";
+    width: 2px;
+    height: 120px;
+    bottom: 126px;
+    z-index: 11;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    background: #000000;
+}
+.numberOclock {
+    top: 275px;
+    right: 283px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.numberOclock::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    right: 75px;
+    top: 22px;
+    z-index: 13;
+    position: absolute;
+    border-radius: 50%;
+    background: purple;
+    animation: opacity 1s infinite;
+}
+.numberOclock::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    right: 75px;
+    bottom: 22px;
+    z-index: 13;
+    position: absolute;
+    border-radius: 50%;
+    background: purple;
+    animation: opacity 1s infinite;
+}
+.number_1, .number_2{
+    font-size: 48px;
+    margin-left: 30px;
+    box-shadow: 0 -13px 30px rgba(134, 134, 134, 0.35),
+    inset 0 -15px 15px #191919,
+    0 15px 15px rgba(134, 134, 134, 0.35),
+    inset 0 -15px 15px #8f20ff;
+    background: #191919;
+    border-radius: 15px;
+    color: purple;
+    padding: 8px;
+}
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
